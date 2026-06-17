@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Lakehouse",
+    "displayName": "BeautyWorld"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "aa3da6a9-b58b-bc22-40f8-10f1a7582796"
+  }
+}

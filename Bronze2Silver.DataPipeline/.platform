@@ -1,0 +1,12 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "DataPipeline",
+    "displayName": "Bronze2Silver",
+    "description": "Pipeline converting raw files into Delta tables"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "002a6b42-fbca-94bb-4d3b-d70b76366757"
+  }
+}
