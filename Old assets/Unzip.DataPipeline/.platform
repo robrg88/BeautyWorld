@@ -2,7 +2,8 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
   "metadata": {
     "type": "DataPipeline",
-    "displayName": "Unzip"
+    "displayName": "Unzip",
+    "description": "Unzips the GZIP to TXT format.\n\nNo longer in use because:\n1) GZIP can be ingested directly without being unzipped\n2) Unzipped files are much bigger and take longer to process."
   },
   "config": {
     "version": "2.0",

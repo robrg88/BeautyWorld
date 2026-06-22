@@ -3,7 +3,7 @@
   "metadata": {
     "type": "DataPipeline",
     "displayName": "Bronze2Silver",
-    "description": "Pipeline converting raw files into Delta tables"
+    "description": "Pipeline converting raw files into Delta tables\n\nNo longer in use due to lack of support to data validation/QC in pipelines. Schemas (i.e. column names and dataypes) can be done through the 'mapping' tab"
   },
   "config": {
     "version": "2.0",

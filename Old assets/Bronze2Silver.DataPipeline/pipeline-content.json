@@ -37,6 +37,7 @@
           ],
           "storeSettings": {
             "type": "AzureBlobStorageReadSettings",
+            "recursive": true,
             "enablePartitionDiscovery": false
           },
           "formatSettings": {
@@ -116,7 +117,7 @@
                     "type": "LakehouseTable",
                     "typeProperties": {
                       "table": {
-                        "value": "@toUpper(item().name)",
+                        "value": "@toUpper(replace(item().name, '.txt.gz', ''))",
                         "type": "Expression"
                       }
                     },
@@ -153,12 +154,12 @@
                 "secureInput": false,
                 "secureOutput": false
               },
-              "name": "Copy data2",
+              "name": "Raw files to Delta tables",
               "dependsOn": []
             }
           ]
         },
-        "name": "ForEach1",
+        "name": "LoopFileList",
         "dependsOn": [
           {
             "activity": "Get Metadata1",
