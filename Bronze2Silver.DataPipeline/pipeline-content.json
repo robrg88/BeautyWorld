@@ -9,7 +9,7 @@
             "typeProperties": {
               "location": {
                 "type": "LakehouseLocation",
-                "folderPath": "1. Landing Zone - Zipped files"
+                "folderPath": "Bronze Layer - Landing Zone"
               },
               "columnDelimiter": "|",
               "compressionCodec": "gzip",
@@ -36,7 +36,7 @@
             "childItems"
           ],
           "storeSettings": {
-            "type": "LakehouseReadSettings",
+            "type": "AzureBlobStorageReadSettings",
             "enablePartitionDiscovery": false
           },
           "formatSettings": {
@@ -70,7 +70,7 @@
                     "type": "DelimitedTextReadSettings"
                   },
                   "storeSettings": {
-                    "type": "LakehouseReadSettings",
+                    "type": "AzureBlobStorageReadSettings",
                     "recursive": true,
                     "enablePartitionDiscovery": false
                   },
@@ -79,7 +79,7 @@
                     "typeProperties": {
                       "location": {
                         "type": "LakehouseLocation",
-                        "folderPath": "1. Landing Zone - Zipped files",
+                        "folderPath": "Bronze Layer - Landing Zone",
                         "fileName": {
                           "value": "@item().name",
                           "type": "Expression"
@@ -116,7 +116,7 @@
                     "type": "LakehouseTable",
                     "typeProperties": {
                       "table": {
-                        "value": "@toUpper(join(take(array(split(item().name, '_')), 4), '_'))",
+                        "value": "@toUpper(item().name)",
                         "type": "Expression"
                       }
                     },
